@@ -1,10 +1,7 @@
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-
-
 const ShowSingleUserPost = (props) => {
-
     const navigate = useNavigate()
 
     const handleDelete = async () => {

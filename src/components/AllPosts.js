@@ -6,7 +6,7 @@ import { useAllPosts } from "../hooks/useAllPosts"
 export const AllPosts = () => {
 
     const onSuccess = (data) => {
-        console.log('post got', data)
+        console.log('got posts', data)
     } 
     const onError = (error) => {
         console.log('no posts', error)

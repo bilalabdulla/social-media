@@ -35,7 +35,7 @@ const Login = () => {
           }
         }
       );
-      console.log('User created:', response.data);
+      console.log('User logged in:', response.data);
 
       response.data.map((res) => {
         if (res.email === userData.email && res.name === userData.name){
@@ -56,7 +56,7 @@ const Login = () => {
       })
       
     } catch (error) {
-      console.error('Error Loggin in:', error);
+      console.error('Error Logging in:', error);
     }
   }
   };

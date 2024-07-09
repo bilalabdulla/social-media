@@ -16,24 +16,20 @@ const SearchUser = () => {
             headers: {
               'Accept': 'application/json',
               'Content-Type': 'application/json',
-              'Authorization': 'Bearer 003efa7ddb01487dc06c89e0e31577edfe62304ee89ac388fa2a72547e3a1580' // Replace with your actual token
+              'Authorization': 'Bearer 003efa7ddb01487dc06c89e0e31577edfe62304ee89ac388fa2a72547e3a1580'
             }
           }
         );
         setUsers(response.data);
         console.log('Users:', response.data);
-        // Handle success or additional logic here
       } catch (error) {
         console.error('Error fetching users:', error);
-        // Handle error or display error message
       }
     };
 
-    
-
-    fetchUsers();
-  }, [searchName]); // Empty dependency array ensures effect runs only once on component mount
-
+    fetchUsers()
+  }, [searchName])
+  
 
   const handleClick = (e) => {
     e.preventDefault()

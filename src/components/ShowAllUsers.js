@@ -13,7 +13,7 @@ const ShowAllUsers = () => {
             headers: {
               'Accept': 'application/json',
               'Content-Type': 'application/json',
-              'Authorization': 'Bearer 003efa7ddb01487dc06c89e0e31577edfe62304ee89ac388fa2a72547e3a1580' // Replace with your actual token
+              'Authorization': 'Bearer 003efa7ddb01487dc06c89e0e31577edfe62304ee89ac388fa2a72547e3a1580'
             }
           }
         );

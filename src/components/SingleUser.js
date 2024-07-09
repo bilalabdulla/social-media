@@ -27,7 +27,7 @@ export const SingleUser = () => {
             headers: {
               'Accept': 'application/json',
               'Content-Type': 'application/json',
-              'Authorization': 'Bearer 003efa7ddb01487dc06c89e0e31577edfe62304ee89ac388fa2a72547e3a1580' // Replace with your actual token
+              'Authorization': 'Bearer 003efa7ddb01487dc06c89e0e31577edfe62304ee89ac388fa2a72547e3a1580'
             }
           }
         );
@@ -93,15 +93,6 @@ export const SingleUser = () => {
           localUser = {localDatas.id} id = {post.id}
           userid={userId}
           />
-          // return <div key={post.id} className='profile-post'>
-          //   <h2 className='posts-title edit-one'>{post.title}</h2>
-          //   <h4 className='posts-body edit-two'>{post.body}</h4>
-          //   <button className={
-          //     (userId == localDatas.id) ? '' : 'view'
-          //   }>
-          //     Delete
-          //     </button>
-          //   </div>
         })
       }
       </div>

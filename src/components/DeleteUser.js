@@ -30,10 +30,8 @@ const DeleteUser = () => {
       console.log('User deleted:', response.data);
       localStorage.removeItem('users')
       navigate('/')
-      // Handle success or additional logic here
     } catch (error) {
       console.error('Error deleting user:', error);
-      // Handle error or display error message
     }
   };
 

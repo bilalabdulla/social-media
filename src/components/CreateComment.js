@@ -33,10 +33,8 @@ const CreateComment = (props) => {
       );
       console.log('User created:', response.data);
       navigate(-1)
-      // Handle success or additional logic here
     } catch (error) {
       console.error('Error creating user:', error);
-      // Handle error or display error message
     }
   };
 

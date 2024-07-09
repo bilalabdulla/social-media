@@ -6,7 +6,7 @@ const CreateNewPost = () => {
 
     const { userId } = useParams()
 
-  const [userData, setUserData] = useState({
+  const [postData, setPostData] = useState({
     user_id: userId,
     title: '',
     body: '',
@@ -20,7 +20,7 @@ const CreateNewPost = () => {
     try {
       const response = await axios.post(
         `https://gorest.co.in/public/v2/users/${userId}/posts`,
-        userData,
+        postData,
         {
           headers: {
             'Content-Type': 'application/json',
@@ -28,16 +28,16 @@ const CreateNewPost = () => {
           }
         }
       );
-      console.log('User created:', response.data);
+      console.log('post created:', response.data);
       navigate(`../homepage`)
     } catch (error) {
-      console.error('Error creating user:', error);
+      console.error('Error creating post:', error);
     }
   };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setUserData(prevState => ({
+    setPostData(prevState => ({
       ...prevState,
       [name]: value
     }));
@@ -52,7 +52,7 @@ const CreateNewPost = () => {
         type="text"
         id="title"
         name="title"
-        value={userData.title}
+        value={postData.title}
         onChange={handleChange}
       />
 
@@ -61,7 +61,7 @@ const CreateNewPost = () => {
         type="text"
         id="body"
         name="body"
-        value={userData.body}
+        value={postData.body}
         onChange={handleChange}
       />
 

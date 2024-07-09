@@ -12,11 +12,11 @@ export const UserPosts = () => {
 
     const handleSubmit = async (e) => {
       e.preventDefault()
-        const newUser = {title, body: content}
+        const newPost = {title, body: content}
         try {
           const response = await axios.post(
             'https://gorest.co.in/public/v2/users/6940251/posts',
-            newUser,
+            newPost,
             {
               headers: {
                 'Content-Type': 'application/json',

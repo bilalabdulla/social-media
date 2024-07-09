@@ -99,18 +99,7 @@ const Register = () => {
         onChange={handleChange}
       />
       </div>
-
-      {/* <div className='input-group'>  
-      <label htmlFor="status">Status:</label>
-      <input
-        type="text"
-        id="status"
-        name="status"
-        value={userData.status}
-        onChange={handleChange}
-      />
-      </div> */}
-
+      
       <button type="submit" className='register-btn'>Register Now</button>
     </form>
     </div>

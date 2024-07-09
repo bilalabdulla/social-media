@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
 import { useAddUserPost, usePostComments, useSinglePost } from "../hooks/useSinglePosts"
-import { request } from "../utils/axios.utils"
 import axios from "axios"
 import CreateComment from "./CreateComment"
 
@@ -23,12 +22,12 @@ export const SinglePost = () => {
                 headers: {
                   'Accept': 'application/json',
                   'Content-Type': 'application/json',
-                  'Authorization': 'Bearer 003efa7ddb01487dc06c89e0e31577edfe62304ee89ac388fa2a72547e3a1580' // Replace with your actual token
+                  'Authorization': 'Bearer 003efa7ddb01487dc06c89e0e31577edfe62304ee89ac388fa2a72547e3a1580'
                 }
               }
             );
             setUsers(response.data);
-            console.log('posts:', response.data);
+            console.log('users:', response.data);
           } catch (error) {
             console.error('Error fetching users:', error);
           }
@@ -46,14 +45,14 @@ export const SinglePost = () => {
                 headers: {
                   'Accept': 'application/json',
                   'Content-Type': 'application/json',
-                  'Authorization': 'Bearer 003efa7ddb01487dc06c89e0e31577edfe62304ee89ac388fa2a72547e3a1580' // Replace with your actual token
+                  'Authorization': 'Bearer 003efa7ddb01487dc06c89e0e31577edfe62304ee89ac388fa2a72547e3a1580'
                 }
               }
             );
             setPost(response.data);
             console.log('posts:', response.data);
           } catch (error) {
-            console.error('Error fetching users:', error);
+            console.error('Error fetching posts:', error);
           }
         };
     

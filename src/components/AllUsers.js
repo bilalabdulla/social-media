@@ -5,10 +5,10 @@ import { useAllUsers } from '../hooks/useAllUserData'
 export const AllUsers = () => {
 
     const onSuccess = (data) => {
-        console.log('we did it', data?.data)
+        console.log('Loaded successfully ', data?.data)
     }
     const onError = (error) => {
-        console.log('we failed', error)
+        console.log('failed loading', error)
     }
 
     const { isLoading, data, isError, error, isFetching, refetch } = useAllUsers(onSuccess, onError)
@@ -27,7 +27,6 @@ export const AllUsers = () => {
       <h2 className='search-title'>All users</h2>
       {
         data?.data.map((user) => {
-          //  return console.log(user.name)
             return <div key={user.id} className='search-item'>
                 <Link to={`${user.id}`} >
                 <p className='search-name'>{user.name}</p>
